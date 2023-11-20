@@ -1,11 +1,12 @@
-import { View, Text } from "react-native";
-import styles from "./styles";
+import { Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import styles from './styles';
 
 const Cart = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Cart</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
