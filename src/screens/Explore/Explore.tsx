@@ -1,11 +1,42 @@
-import { Text } from 'react-native';
+import {
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styles from './styles';
+import { Feather, Fontisto, Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import Welcome from '../../components/Explore/Welcome';
+import { COLORS } from '../../constants';
 
 const Explore = () => {
+  const navigation = useNavigation();
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Explore</Text>
+    <SafeAreaView>
+      <View style={styles.appBarWrapper}>
+        <View style={styles.appBar}>
+          <Ionicons name='location' size={24} color={COLORS.offwhite} />
+          <Text style={styles.location}> Guadalajara </Text>
+          <View style={{ alignItems: 'flex-end' }}>
+            <View style={styles.cartCount}>
+              <Text style={styles.cartNumber}>10</Text>
+            </View>
+            <TouchableOpacity>
+              <Fontisto
+                name='shopping-bag-1'
+                size={24}
+                color={COLORS.offwhite}
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
+        <ScrollView>
+          <Welcome />
+        </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };

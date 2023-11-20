@@ -1,13 +1,21 @@
-import React from 'react';
-import BottomTabNavigation from './src/navigation/BottomTabNavigation';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { useCallback } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React, { useCallback } from 'react';
+import BottomTabNavigation from './src/navigation/BottomTabNavigation';
+import Cart from './src/screens/Cart/Cart';
+import { StatusBar } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: '#121212',
+  },
+};
 export default function App() {
   const [fontsLoaded] = useFonts({
     regular: require('./src/assets/fonts/Poppins-Regular.ttf'),
@@ -21,21 +29,32 @@ export default function App() {
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
+      console.log('fonts loaded');
     }
   }, [fontsLoaded]);
 
   if (!fontsLoaded) return null;
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name='BottomTabNavigation'
-          component={BottomTabNavigation}
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <StatusBar barStyle='light-content' />
+      <NavigationContainer theme={MyTheme}>
+        <Stack.Navigator>
+          <Stack.Screen
+            name='BottomTabNavigation'
+            component={BottomTabNavigation}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name='Cart'
+            component={Cart}
+            options={{
+              headerShown: false,
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
