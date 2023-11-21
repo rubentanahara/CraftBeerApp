@@ -11,6 +11,9 @@ import { Feather, Fontisto, Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import Welcome from '../../components/Explore/Welcome';
 import { COLORS } from '../../constants';
+import Carousel from '../../components/Explore/Carousel';
+import Headings from '../../components/Explore/Headings';
+import ProductList from '../../components/ui/Products/ProductList';
 
 const Explore = () => {
   const navigation = useNavigation();
@@ -35,6 +38,9 @@ const Explore = () => {
         </View>
         <ScrollView>
           <Welcome />
+          <Carousel />
+          <Headings />
+          <ProductList />
         </ScrollView>
       </View>
     </SafeAreaView>

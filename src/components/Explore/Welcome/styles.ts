@@ -5,31 +5,32 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
   },
-  welcomeText: (color: string, top: number) => ({
-    fontFamily: 'bold',
-    fontSize: SIZES.xLarge,
-    marginTop: top,
-    color: color,
-    marginHorizontal: SIZES.small,
-  }),
+  welcomeText: (color: string, top: number) => {
+    return {
+      fontFamily: 'bold',
+      fontSize: SIZES.xLarge,
+      marginTop: top,
+      color: color,
+      marginHorizontal: SIZES.small,
+    };
+  },
   searchContainer: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignContent: 'center',
-    backgroundColor: COLORS.offwhite,
+    backgroundColor: COLORS.white,
     borderRadius: SIZES.medium,
     marginVertical: SIZES.medium,
-    marginHorizontal: SIZES.small,
     height: 50,
   },
   searchIcon: {
     marginHorizontal: 10,
-    color: COLORS.gray,
+    color: COLORS.black,
     top: SIZES.small,
   },
   searchWrapper: {
     flex: 1,
-    backgroundColor: COLORS.gray,
+    backgroundColor: COLORS.gray2,
     marginRight: SIZES.small,
     borderRadius: SIZES.small,
   },

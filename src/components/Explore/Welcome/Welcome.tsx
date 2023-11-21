@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import styles from './styles';
 import { COLORS, SIZES } from '../../../constants';
-import { Feather } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 const Welcome = () => {
@@ -13,7 +13,7 @@ const Welcome = () => {
       </Text>
       <View style={styles.searchContainer}>
         <TouchableOpacity>
-          <Feather name='search' size={24} style={styles.searchIcon} />
+          <Ionicons name='ios-search' size={24} style={styles.searchIcon} />
         </TouchableOpacity>
         <View>
           <TextInput
