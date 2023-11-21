@@ -1,7 +1,6 @@
-import { View, Text, FlatList } from 'react-native';
-import styles from './styles';
-import ProductCard from '../ProductCard';
+import { FlatList, View } from 'react-native';
 import { SIZES } from '../../../../constants';
+import ProductCard from '../ProductCard';
 
 const ProductList = () => {
   const products = [1, 2, 3, 4];
