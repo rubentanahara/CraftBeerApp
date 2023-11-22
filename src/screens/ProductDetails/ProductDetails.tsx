@@ -42,14 +42,19 @@ const ProductDetails = () => {
       </View>
       <Image
         source={{
-          uri: 'https://instagram.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/383424429_694769659347101_6304947905056904829_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMTgweDE0NzUuc2RyIn0&_nc_ht=instagram.fgdl9-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=4WnVmMwesBkAX9BOr-H&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzIwMTM5MTMxNzAxNjE3MDY4Mw%3D%3D.2-ccb7-5&oh=00_AfBY0m_8iHeGwrLxw_X1xDiYnMQIQV_MK5Y5mIqihDXx0g&oe=655FD7DB&_nc_sid=b41fef',
+          uri: 'https://images.unsplash.com/photo-1597822738124-151fb72dcb79?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         }}
         style={styles.image}
       />
 
       <View style={styles.details}>
         <View style={styles.titleRow}>
-          <Text style={styles.title}>Fauna</Text>
+          <Text
+            style={styles.title}
+            onPress={() => navigation.navigate('CarftBeerProfile')}
+          >
+            Maldito Consuelo
+          </Text>
           <View style={styles.priceWrapper}>
             <Text style={styles.price}>$99 MXN</Text>
           </View>

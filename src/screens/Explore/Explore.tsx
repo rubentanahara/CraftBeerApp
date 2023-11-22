@@ -39,7 +39,7 @@ const Explore = () => {
         <ScrollView>
           <Welcome />
           <Carousel />
-          <Headings />
+          <Headings title={'Lo nuevo'} />
           <ProductList />
         </ScrollView>
       </View>

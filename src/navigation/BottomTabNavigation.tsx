@@ -55,34 +55,34 @@ const BottomTabNavigation = () => {
           ),
         }}
       />
-      <Tab.Screen
-        name='Wishlist'
-        component={WishlistScreen}
-        options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <Ionicons
-                name={focused ? 'ios-heart' : 'ios-heart-outline'}
-                size={24}
-                color={focused ? COLORS.white : COLORS.gray2}
-              />
-            );
-          },
-          tabBarLabel: ({ focused }) => (
-            <Text
-              style={{
-                color: focused ? COLORS.white : COLORS.gray2,
-                fontSize: SIZES.small,
-                fontWeight: 'bold',
-                textAlign: 'center',
-                marginTop: -SIZES.medium,
-              }}
-            >
-              Wishlist
-            </Text>
-          ),
-        }}
-      />
+      {/* <Tab.Screen */}
+      {/*   name='Wishlist' */}
+      {/*   component={WishlistScreen} */}
+      {/*   options={{ */}
+      {/*     tabBarIcon: ({ focused }) => { */}
+      {/*       return ( */}
+      {/*         <Ionicons */}
+      {/*           name={focused ? 'ios-heart' : 'ios-heart-outline'} */}
+      {/*           size={24} */}
+      {/*           color={focused ? COLORS.white : COLORS.gray2} */}
+      {/*         /> */}
+      {/*       ); */}
+      {/*     }, */}
+      {/*     tabBarLabel: ({ focused }) => ( */}
+      {/*       <Text */}
+      {/*         style={{ */}
+      {/*           color: focused ? COLORS.white : COLORS.gray2, */}
+      {/*           fontSize: SIZES.small, */}
+      {/*           fontWeight: 'bold', */}
+      {/*           textAlign: 'center', */}
+      {/*           marginTop: -SIZES.medium, */}
+      {/*         }} */}
+      {/*       > */}
+      {/*         Wishlist */}
+      {/*       </Text> */}
+      {/*     ), */}
+      {/*   }} */}
+      {/* /> */}
       <Tab.Screen
         name='Inbox'
         component={InboxScreen}
@@ -112,32 +112,32 @@ const BottomTabNavigation = () => {
         }}
       />
 
-      <Tab.Screen
-        name='Profile'
-        component={ProfileScreen}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? 'ios-person' : 'ios-person-outline'}
-              size={24}
-              color={focused ? COLORS.white : COLORS.gray2}
-            />
-          ),
-          tabBarLabel: ({ focused }) => (
-            <Text
-              style={{
-                color: focused ? COLORS.white : COLORS.gray2,
-                fontSize: SIZES.small,
-                fontWeight: 'bold',
-                textAlign: 'center',
-                marginTop: -SIZES.medium,
-              }}
-            >
-              Profile
-            </Text>
-          ),
-        }}
-      />
+      {/* <Tab.Screen */}
+      {/*   name='Profile' */}
+      {/*   component={ProfileScreen} */}
+      {/*   options={{ */}
+      {/*     tabBarIcon: ({ focused }) => ( */}
+      {/*       <Ionicons */}
+      {/*         name={focused ? 'ios-person' : 'ios-person-outline'} */}
+      {/*         size={24} */}
+      {/*         color={focused ? COLORS.white : COLORS.gray2} */}
+      {/*       /> */}
+      {/*     ), */}
+      {/*     tabBarLabel: ({ focused }) => ( */}
+      {/*       <Text */}
+      {/*         style={{ */}
+      {/*           color: focused ? COLORS.white : COLORS.gray2, */}
+      {/*           fontSize: SIZES.small, */}
+      {/*           fontWeight: 'bold', */}
+      {/*           textAlign: 'center', */}
+      {/*           marginTop: -SIZES.medium, */}
+      {/*         }} */}
+      {/*       > */}
+      {/*         Profile */}
+      {/*       </Text> */}
+      {/*     ), */}
+      {/*   }} */}
+      {/* /> */}
     </Tab.Navigator>
   );
 };

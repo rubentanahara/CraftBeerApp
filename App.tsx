@@ -5,6 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import React, { useCallback } from 'react';
 import BottomTabNavigation from './src/navigation/BottomTabNavigation';
 import Cart from './src/screens/Cart/Cart';
+import CraftBeerProfile from './src/screens/CraftBeerProfile';
 import ProductDetails from './src/screens/ProductDetails/ProductDetails';
 import { StatusBar } from 'react-native';
 
@@ -57,6 +58,13 @@ export default function App() {
           <Stack.Screen
             name='ProductDetails'
             component={ProductDetails}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name='CarftBeerProfile'
+            component={CraftBeerProfile}
             options={{
               headerShown: false,
             }}
