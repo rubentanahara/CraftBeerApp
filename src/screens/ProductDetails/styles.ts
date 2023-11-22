@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   details: {
     flex: 1,
     marginTop: -SIZES.large,
-    backgroundColor: COLORS.lightWhite,
+    backgroundColor: '#161616',
     width: SIZES.width,
     borderTopLeftRadius: SIZES.medium,
     borderTopRightRadius: SIZES.medium,
@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'bold',
     fontSize: SIZES.xLarge,
+    color: COLORS.white,
   },
   priceWrapper: {
     backgroundColor: COLORS.secondary,
@@ -66,26 +67,28 @@ const styles = StyleSheet.create({
   ratingText: {
     fontFamily: 'medium',
     fontSize: SIZES.medium,
-    color: COLORS.gray,
+    color: COLORS.lightWhite,
   },
   quantityText: {
     fontFamily: 'medium',
     fontSize: SIZES.large,
-    color: COLORS.black,
+    color: COLORS.white,
   },
   descriptionWrapper: {
     marginTop: SIZES.large * 2,
     marginHorizontal: SIZES.large,
   },
   descriptionTitle: {
-    fontFamily: 'medium',
-    fontSize: SIZES.large - 2,
+    fontFamily: 'semibold',
+    fontSize: SIZES.large,
+    color: COLORS.white,
   },
   descriptionBody: {
     fontFamily: 'regular',
     fontSize: SIZES.small,
     textAlign: 'justify',
     marginBottom: SIZES.small,
+    color: COLORS.white,
   },
   location: {
     flexDirection: 'row',
@@ -114,7 +117,7 @@ const styles = StyleSheet.create({
     marginLeft: SIZES.small,
     fontFamily: 'semibold',
     fontSize: SIZES.medium,
-    color: COLORS.lightWhite,
+    color: COLORS.white,
   },
   addCart: {
     height: SIZES.xxxLarge,

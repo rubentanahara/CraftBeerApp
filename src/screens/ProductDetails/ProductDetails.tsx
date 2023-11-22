@@ -29,12 +29,12 @@ const ProductDetails = () => {
     <View style={styles.container}>
       <View style={styles.upperRow}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Ionicons name='chevron-back-circle' size={35} color={COLORS.white} />
+          <Ionicons name='chevron-back-circle' size={35} color={COLORS.black} />
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => setLike((p) => !p)}>
           <Ionicons
-            name='heart'
+            name={like ? 'heart' : 'heart-outline'}
             size={35}
             color={like ? COLORS.red : COLORS.white}
           />
@@ -99,16 +99,22 @@ const ProductDetails = () => {
             justifyContent: 'space-between',
           }}
         >
-          <Text style={{ fontFamily: 'bold', fontSize: SIZES.xLarge }}>
+          <Text
+            style={{
+              fontFamily: 'bold',
+              fontSize: SIZES.xLarge,
+              color: COLORS.white,
+            }}
+          >
             Cantidad
           </Text>
           <View style={styles.rating}>
             <TouchableOpacity onPress={() => decrement()}>
-              <SimpleLineIcons name='minus' size={30} />
+              <SimpleLineIcons name='minus' size={30} color={COLORS.white} />
             </TouchableOpacity>
             <Text style={styles.quantityText}>{count}</Text>
             <TouchableOpacity onPress={() => increment()}>
-              <SimpleLineIcons name='plus' size={30} color={COLORS.black} />
+              <SimpleLineIcons name='plus' size={30} color={COLORS.white} />
             </TouchableOpacity>
           </View>
         </View>

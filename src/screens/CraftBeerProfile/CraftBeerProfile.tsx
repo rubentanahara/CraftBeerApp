@@ -69,6 +69,7 @@ const CraftBeerProfile = () => {
           <Carousel />
           <Headings title={'Nuestras Cervezas'} />
           <ProductList />
+          <View style={{ height: 50 }}></View>
         </ScrollView>
       </View>
     </View>
