@@ -7,6 +7,7 @@ import BottomTabNavigation from './src/navigation/BottomTabNavigation';
 import Cart from './src/screens/Cart/Cart';
 import CraftBeerProfile from './src/screens/CraftBeerProfile';
 import ProductDetails from './src/screens/ProductDetails/ProductDetails';
+import Messages from './src/screens/Messages';
 import { StatusBar } from 'react-native';
 import ListingMap from './src/screens/ListingMap';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -50,13 +51,13 @@ export default function App() {
               headerShown: false,
             }}
           />
-          {/* <Stack.Screen */}
-          {/*   name='Cart' */}
-          {/*   component={Cart} */}
-          {/*   options={{ */}
-          {/*     headerShown: false, */}
-          {/*   }} */}
-          {/* /> */}
+          <Stack.Screen
+            name='Messages'
+            component={Messages}
+            options={{
+              headerShown: false,
+            }}
+          />
           <Stack.Screen
             name='ProductDetails'
             component={ProductDetails}

@@ -1,5 +1,6 @@
 import { View, Text, Pressable, Image } from 'react-native';
 import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 const Thread = ({ msg }) => {
   function convertToHourMinute(dateTimeStr) {
@@ -12,9 +13,10 @@ const Thread = ({ msg }) => {
     const formattedHours = hours.toString().padStart(2, '0');
     return `${formattedHours}:${minutes} ${ampm}`;
   }
+  const navigation = useNavigation();
   return (
     <Pressable
-      onPress={() => console.log('press thread')}
+      onPress={() => navigation.navigate('Messages')}
       style={styles.container}
     >
       <Image
