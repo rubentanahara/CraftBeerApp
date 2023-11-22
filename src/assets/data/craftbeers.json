@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "craftBeerName": "Cola Blanca",
+    "latitude": 20.666,
+    "longitude": -103.40415,
+    "address": "Not specified"
+  },
+  {
+    "id": 2,
+    "craftBeerName": "Cielito Lindo",
+    "latitude": 20.70401,
+    "longitude": -103.3545,
+    "address": "Not specified"
+  },
+  {
+    "id": 3,
+    "craftBeerName": "Loba",
+    "latitude": 20.67794,
+    "longitude": -103.36122,
+    "address": "Not specified"
+  },
+  {
+    "id": 4,
+    "craftBeerName": "Maldito Consuelo",
+    "latitude": 20.67768,
+    "longitude": -103.40266,
+    "address": "Not specified"
+  },
+  {
+    "id": 5,
+    "craftBeerName": "Amargo",
+    "latitude": 20.67284,
+    "longitude": -103.35788,
+    "address": "Not specified"
+  },
+  {
+    "id": 6,
+    "craftBeerName": "Malta 33",
+    "latitude": 20.68577,
+    "longitude": -103.36835,
+    "address": "Not specified"
+  },
+  {
+    "id": 7,
+    "craftBeerName": "Tonel de diogenes",
+    "latitude": 20.67627,
+    "longitude": -103.36136,
+    "address": "Not specified"
+  },
+  {
+    "id": 8,
+    "craftBeerName": "Principia",
+    "latitude": 20.67306,
+    "longitude": -103.37841,
+    "address": "Not specified"
+  },
+  {
+    "id": 9,
+    "craftBeerName": "Fortuna",
+    "latitude": 20.73743,
+    "longitude": -103.58344,
+    "address": "Not specified"
+  }
+]

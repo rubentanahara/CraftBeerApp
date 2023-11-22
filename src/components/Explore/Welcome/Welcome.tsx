@@ -32,7 +32,8 @@ const Welcome = () => {
             />
           </View>
         </View>
-        <View
+        <TouchableOpacity
+          onPress={() => navigation.navigate('MapView')}
           style={{
             backgroundColor: COLORS.red,
             height: 50,
@@ -48,7 +49,7 @@ const Welcome = () => {
             Mapa
           </Text>
           <Ionicons name='ios-map' size={SIZES.medium} color={COLORS.white} />
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

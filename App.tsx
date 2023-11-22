@@ -8,7 +8,7 @@ import Cart from './src/screens/Cart/Cart';
 import CraftBeerProfile from './src/screens/CraftBeerProfile';
 import ProductDetails from './src/screens/ProductDetails/ProductDetails';
 import { StatusBar } from 'react-native';
-
+import ListingMap from './src/screens/ListingMap';
 const Stack = createNativeStackNavigator();
 
 const MyTheme = {
@@ -65,6 +65,13 @@ export default function App() {
           <Stack.Screen
             name='CarftBeerProfile'
             component={CraftBeerProfile}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name='MapView'
+            component={ListingMap}
             options={{
               headerShown: false,
             }}
