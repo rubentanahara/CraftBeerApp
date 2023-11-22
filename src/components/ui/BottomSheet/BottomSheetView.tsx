@@ -3,6 +3,8 @@ import { useMemo, useRef, useState } from 'react';
 import BottomSheet from '@gorhom/bottom-sheet';
 import { Ionicons } from '@expo/vector-icons';
 import { COLORS } from '../../../constants';
+import CraftBeerItem from '../CraftBeerCard/CraftBeerItem';
+import CraftBeerList from '../CraftBeerList/CraftBeerList';
 
 interface Props {
   listings: any[];
@@ -33,7 +35,7 @@ const BottomSheetView = () => {
       style={styles.sheetContainer}
     >
       <View style={styles.contentContainer}>
-        {/* <Listings listings={listings} refresh={refresh} category={category} /> */}
+        <CraftBeerList />
         <View style={styles.absoluteView}>
           <TouchableOpacity onPress={onShowMap} style={styles.btn}>
             <Text style={{ fontFamily: 'semibold', color: '#fff' }}>Mapa</Text>
@@ -53,6 +55,7 @@ const BottomSheetView = () => {
 const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
+    alignItems: 'center',
     backgroundColor: '#161616',
   },
   absoluteView: {
@@ -62,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   btn: {
-    backgroundColor: COLORS.black,
+    backgroundColor: COLORS.red,
     padding: 14,
     height: 50,
     borderRadius: 30,

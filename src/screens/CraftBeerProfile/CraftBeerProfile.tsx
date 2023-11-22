@@ -8,7 +8,8 @@ import Headings from '../../components/Explore/Headings';
 import ProductList from '../../components/ui/Products/ProductList';
 import Carousel from '../../components/Explore/Carousel';
 
-const CraftBeerProfile = () => {
+const CraftBeerProfile = ({ props }) => {
+  console.log(props);
   const [like, setLike] = React.useState(false);
   const navigation = useNavigation();
   return (

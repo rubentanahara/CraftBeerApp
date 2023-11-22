@@ -7,6 +7,8 @@ import { Marker } from 'react-native-maps';
 import craftbeers from '../../../src/assets/data/craftbeers.json';
 import { COLORS } from '../../constants';
 import BottomSheetView from '../../components/ui/BottomSheet/BottomSheetView';
+import theme from '../../constants/map_theme.json';
+import { useNavigation } from '@react-navigation/native';
 
 const INITIAL_REGION = {
   latitude: 20.679767252382405,
@@ -16,6 +18,8 @@ const INITIAL_REGION = {
 };
 
 const ListingMap = () => {
+  const navigation = useNavigation();
+
   const mapRef = useRef<any>(null);
   useEffect(() => {
     onLocateMe();
@@ -54,7 +58,7 @@ const ListingMap = () => {
         <View style={styles.marker}>
           <Text
             style={{
-              color: '#000',
+              color: COLORS.white,
               textAlign: 'center',
               fontFamily: 'semibold',
             }}
@@ -76,6 +80,7 @@ const ListingMap = () => {
         provider='google'
         clusterFontFamily='semibold'
         renderCluster={renderCluster}
+        customMapStyle={theme}
       >
         {craftbeers.map((item) => (
           <Marker
@@ -93,6 +98,12 @@ const ListingMap = () => {
         ))}
       </MapView>
       <BottomSheetView />
+      <TouchableOpacity
+        style={styles.goBackBtn}
+        onPress={() => navigation.goBack()}
+      >
+        <Ionicons name='chevron-back' size={24} color={COLORS.black} />
+      </TouchableOpacity>
       <TouchableOpacity style={styles.locateBtn} onPress={() => onLocateMe}>
         <Ionicons name='navigate' size={24} color={COLORS.black} />
       </TouchableOpacity>
@@ -111,7 +122,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.red,
     elevation: 5,
     borderRadius: 12,
-    shadowColor: '#000',
+    shadowColor: COLORS.black,
     shadowOpacity: 0.1,
     shadowRadius: 6,
     shadowOffset: {
@@ -123,15 +134,31 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: 'semibold',
   },
+  goBackBtn: {
+    position: 'absolute',
+    top: 70,
+    left: 20,
+    backgroundColor: COLORS.lightWhite,
+    padding: 10,
+    borderRadius: 10,
+    elevation: 2,
+    shadowColor: COLORS.black,
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    shadowOffset: {
+      width: 1,
+      height: 10,
+    },
+  },
   locateBtn: {
     position: 'absolute',
     top: 70,
     right: 20,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.lightWhite,
     padding: 10,
     borderRadius: 10,
     elevation: 2,
-    shadowColor: '#000',
+    shadowColor: COLORS.black,
     shadowOpacity: 0.1,
     shadowRadius: 6,
     shadowOffset: {

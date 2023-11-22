@@ -37,6 +37,7 @@ export default function App() {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) return null;
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar barStyle='light-content' />
