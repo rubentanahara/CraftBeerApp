@@ -9,6 +9,7 @@ import CraftBeerProfile from './src/screens/CraftBeerProfile';
 import ProductDetails from './src/screens/ProductDetails/ProductDetails';
 import { StatusBar } from 'react-native';
 import ListingMap from './src/screens/ListingMap';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 const Stack = createNativeStackNavigator();
 
 const MyTheme = {
@@ -37,7 +38,7 @@ export default function App() {
 
   if (!fontsLoaded) return null;
   return (
-    <>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar barStyle='light-content' />
       <NavigationContainer theme={MyTheme}>
         <Stack.Navigator>
@@ -78,6 +79,6 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
-    </>
+    </GestureHandlerRootView>
   );
 }

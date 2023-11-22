@@ -48,7 +48,7 @@ const Welcome = () => {
           <Text style={{ fontFamily: 'semibold', color: COLORS.white }}>
             Mapa
           </Text>
-          <Ionicons name='ios-map' size={SIZES.medium} color={COLORS.white} />
+          <Ionicons name='map' size={SIZES.medium} color={COLORS.white} />
         </TouchableOpacity>
       </View>
     </View>

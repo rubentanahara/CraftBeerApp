@@ -6,6 +6,7 @@ import MapView from 'react-native-map-clustering';
 import { Marker } from 'react-native-maps';
 import craftbeers from '../../../src/assets/data/craftbeers.json';
 import { COLORS } from '../../constants';
+import BottomSheetView from '../../components/ui/BottomSheet/BottomSheetView';
 
 const INITIAL_REGION = {
   latitude: 20.679767252382405,
@@ -16,7 +17,6 @@ const INITIAL_REGION = {
 
 const ListingMap = () => {
   const mapRef = useRef<any>(null);
-  // When the component mounts, locate the user
   useEffect(() => {
     onLocateMe();
   }, []);
@@ -38,7 +38,6 @@ const ListingMap = () => {
 
     mapRef.current?.animateToRegion(region);
   };
-  // Overwrite the renderCluster function to customize the cluster markers
   const renderCluster = (cluster: any) => {
     const { id, geometry, onPress, properties } = cluster;
 
@@ -93,6 +92,7 @@ const ListingMap = () => {
           </Marker>
         ))}
       </MapView>
+      <BottomSheetView />
       <TouchableOpacity style={styles.locateBtn} onPress={() => onLocateMe}>
         <Ionicons name='navigate' size={24} color={COLORS.black} />
       </TouchableOpacity>
@@ -140,4 +140,5 @@ const styles = StyleSheet.create({
     },
   },
 });
+
 export default ListingMap;
