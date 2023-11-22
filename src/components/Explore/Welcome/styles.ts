@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     };
   },
   searchContainer: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignContent: 'center',
